@@ -5,6 +5,12 @@ class Ccmorph < Formula
   sha256 "cc2abbef306b276f202429d753f5f2beba90e5ef41329dd01f1937bbf7bcb460"
   license "MIT"
 
+  bottle do
+    root_url "https://github.com/akleizor/homebrew-tap/releases/download/ccmorph-0.3.0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:  "c03d640a188c3b0750d11a226e24c04f3bb8c4b9083542ab8700e62dc0e7b9ad"
+    sha256 cellar: :any,                 x86_64_linux: "9fdcf56bce5bdc4135d6186c46317edf3ab60846f2d3de7ad57479403f04d37c"
+  end
+
   depends_on "go" => :build
   uses_from_macos "zsh"
 
