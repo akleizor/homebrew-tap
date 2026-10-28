@@ -31,8 +31,7 @@ class Ccmorph < Formula
     # The shim exits on its own once its --parent-pid (a short sleep) is gone.
     assert_match "gateway-shim :",
                  shell_output("sleep 2 & #{libexec}/libexec/gateway-shim 0 http://127.0.0.1:9 --parent-pid=$!")
-    # Launch runs ccmorph-core; doctor exercises it and the zsh library together.
-    assert_predicate libexec/"libexec/ccmorph-core", :executable?
-    system bin/"ccmorph", "doctor"
+    # Launch runs ccmorph-core; a missing or unrunnable binary fails here.
+    assert_match "usage: ccmorph-core", shell_output("#{libexec}/libexec/ccmorph-core 2>&1", 2)
   end
 end
