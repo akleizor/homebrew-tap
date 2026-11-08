@@ -6,9 +6,9 @@ class Ccmorph < Formula
   license "MIT"
 
   bottle do
-    root_url "https://github.com/akleizor/homebrew-tap/releases/download/ccmorph-0.5.6"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:  "51c187eecc909d50feb00a169ec90b30f3f93bf69adf47a9910ddc92bc4419b8"
-    sha256 cellar: :any,                 x86_64_linux: "0ddfd092b3e2da0ef8715e14d3f8113e1d1c66b9e0e3528c0e79a4dd17585337"
+    root_url "https://github.com/akleizor/homebrew-tap/releases/download/ccmorph-0.5.7"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:  "329d5d7f04bd1580bce5004c0da9d8b9723cdcd2026597fcd5bf94c7c8e9ea44"
+    sha256 cellar: :any,                 x86_64_linux: "3e40e9962f1a6beb58ef50e383ad8616c4ee409cb3c97ba4e090c90de1eecfe2"
   end
 
   depends_on "go" => :build
