@@ -20,6 +20,9 @@ class Ccmorph < Formula
     # ccmorph finds lib/, libexec/ and share/ beside each other; state stays in ~/.config/ccmorph.
     libexec.install "bin", "lib", "libexec", "share"
     bin.install_symlink libexec/"bin/ccmorph"
+    # zsh Tab completion (ccmorph #281); a release before it ships no _ccmorph.
+    completion = libexec/"share/zsh/site-functions/_ccmorph"
+    zsh_completion.install_symlink completion if completion.exist?
   end
 
   def caveats
