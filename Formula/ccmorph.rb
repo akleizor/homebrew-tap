@@ -1,8 +1,8 @@
 class Ccmorph < Formula
   desc "Every Claude Code account, API key and gateway behind one command"
   homepage "https://github.com/akleizor/ccmorph"
-  url "https://github.com/akleizor/ccmorph/archive/refs/tags/v0.5.10.tar.gz"
-  sha256 "88ab99dfdcc052997c2076dc5b8e534d54494f97df7699b9cb3102df7a9b05ef"
+  url "https://github.com/akleizor/ccmorph/archive/refs/tags/v0.5.11.tar.gz"
+  sha256 "fdccbcc21e954a60cc224e2e430d8fc940a609e93a2771e2d1667534b8aa2ba9"
   license "MIT"
 
   bottle do
