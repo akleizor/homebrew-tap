@@ -1,15 +1,9 @@
 class Ccmorph < Formula
   desc "Every Claude Code account, API key and gateway behind one command"
   homepage "https://github.com/akleizor/ccmorph"
-  url "https://github.com/akleizor/ccmorph/archive/refs/tags/v0.5.9.tar.gz"
-  sha256 "0bd6c4d70c13220cb6bd4b9108dcca1335834c11f11dcdab27b50fc15c3ce63f"
+  url "https://github.com/akleizor/ccmorph/archive/refs/tags/v0.5.10.tar.gz"
+  sha256 "88ab99dfdcc052997c2076dc5b8e534d54494f97df7699b9cb3102df7a9b05ef"
   license "MIT"
-
-  bottle do
-    root_url "https://github.com/akleizor/homebrew-tap/releases/download/ccmorph-0.5.9"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:  "2125dfd946ddda8f20244ec13922879a32a6662bc158b7f127dcb1c7d68bc416"
-    sha256 cellar: :any,                 x86_64_linux: "12defa977558fa043e71007d8b7940adc1905eebcc0fb81ba7d4c4ba682874b7"
-  end
 
   depends_on "go" => :build
   uses_from_macos "zsh"
