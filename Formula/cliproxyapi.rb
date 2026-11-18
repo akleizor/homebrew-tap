@@ -1,5 +1,5 @@
 class Cliproxyapi < Formula
-  desc "CLIProxyAPI with Gemini reasoning_details and parallel tool call fixes"
+  desc "Proxy API with Gemini reasoning_details and parallel tool call fixes"
   homepage "https://github.com/akleizor/CLIProxyAPI"
   # Prebuilt: Homebrew's sandboxed Go build hangs on this machine (akleizor/ccmorph#646).
   url "https://github.com/akleizor/CLIProxyAPI/releases/download/v8.0.76-akleizor.4/cliproxyapi-8.0.76-akleizor.4-darwin-arm64.tar.gz"
