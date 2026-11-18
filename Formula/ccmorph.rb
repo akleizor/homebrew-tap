@@ -7,8 +7,9 @@ class Ccmorph < Formula
 
   bottle do
     root_url "https://github.com/akleizor/homebrew-tap/releases/download/ccmorph-0.5.15"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:  "1e1a0f58bf9b763e9f7e5729650361e83f9f4525894613ce1c865770201aa119"
-    sha256 cellar: :any,                 x86_64_linux: "0804159421a19ab0ccc600f7c40bf12f9382d2e4a848140623534b9bf15906eb"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:  "fc427d2a3ee0870ad59d70c85bdfeabd9077222ae4a4302aa7595f12f98269df"
+    sha256 cellar: :any,                 x86_64_linux: "c9ae3672249f92a766a920ecb71c1e021a47b87861df007aecf6058df3c9fe8b"
   end
 
   depends_on "go" => :build
