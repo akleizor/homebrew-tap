@@ -19,7 +19,9 @@ class Ccmorph < Formula
            "./cmd/ccmorph-core"
     # ccmorph finds lib/, libexec/ and share/ beside each other; state stays in ~/.config/ccmorph.
     libexec.install "bin", "lib", "libexec", "share"
-    bin.install_symlink libexec/"bin/ccmorph"
+    # A session exports CCMORPH_LIB_DIR to its children; the opt path survives an upgrade,
+    # a Cellar version path does not, and every running session's ccmorph would then fail.
+    (bin/"ccmorph").write_env_script opt_libexec/"bin/ccmorph", CCMORPH_LIB_DIR: opt_libexec/"lib"
     # zsh Tab completion (ccmorph #281); a release before it ships no _ccmorph.
     completion = libexec/"share/zsh/site-functions/_ccmorph"
     zsh_completion.install_symlink completion if completion.exist?
@@ -35,6 +37,8 @@ class Ccmorph < Formula
 
   test do
     assert_match version.to_s, shell_output("#{bin}/ccmorph --version")
+    # a session started before an upgrade still names the removed version's library
+    assert_match version.to_s, shell_output("CCMORPH_LIB_DIR=/nonexistent/lib #{bin}/ccmorph --version")
     # The shim exits on its own once its --parent-pid (a short sleep) is gone.
     assert_match "shim :",
                  shell_output("sleep 2 & #{libexec}/libexec/ccmorph-core shim 0 http://127.0.0.1:9 --parent-pid=$!")
