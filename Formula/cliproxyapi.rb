@@ -7,6 +7,11 @@ class Cliproxyapi < Formula
   sha256 "f1cc61a32c07d253eddc5e2bc78a7975f94146561836bf760c2ea83f7a2b684c"
   license "MIT"
 
+  bottle do
+    root_url "https://github.com/akleizor/homebrew-tap/releases/download/cliproxyapi-8.0.76-akleizor.7"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe: "23b578749bd5887ad62d2124b910c1134e61cb31bea98f43ed38df72b9b67726"
+  end
+
   depends_on arch: :arm64
   depends_on :macos
 
