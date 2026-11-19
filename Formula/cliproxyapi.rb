@@ -7,7 +7,6 @@ class Cliproxyapi < Formula
   sha256 "d166c25b38e08bf692072f9ec4f754765b9e79c0cfc7577976e3d71836e102ed"
   license "MIT"
 
-
   depends_on arch: :arm64
   depends_on :macos
 
