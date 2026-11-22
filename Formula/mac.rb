@@ -24,7 +24,8 @@ class Mac < Formula
   test do
     assert_match "usage: mac", shell_output("#{bin}/mac 2>&1", 2)
     # the driver mac builds on first use compiles and answers without any permission
-    system "swiftc", "-O", "-module-cache-path", testpath/"module-cache", libexec/"lib/ax.swift", "-o", testpath/"mac-ax"
+    system "swiftc", "-O", "-module-cache-path", testpath/"module-cache",
+           libexec/"lib/ax.swift", "-o", testpath/"mac-ax"
     assert_match "granted", shell_output("#{testpath}/mac-ax trusted")
   end
 end
