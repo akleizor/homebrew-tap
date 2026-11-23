@@ -1,14 +1,9 @@
 class Mac < Formula
   desc "Operate macOS apps through Accessibility from the command-line"
   homepage "https://github.com/akleizor/mac-pilot"
-  url "https://github.com/akleizor/mac-pilot/archive/refs/tags/v0.4.1.tar.gz"
-  sha256 "2371ef9ef48efa7331e13c6a15a9397d100ec507bc4617626ea7441c107453ba"
+  url "https://github.com/akleizor/mac-pilot/archive/refs/tags/v0.4.2.tar.gz"
+  sha256 "fbb0b920a05e21552cc70838dca7f673610a8eb29f500ea32e06896bb3dd234d"
   license "Apache-2.0"
-
-  bottle do
-    root_url "https://github.com/akleizor/homebrew-tap/releases/download/mac-0.4.1"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe: "5ac6c2f40aab8a1fa9a68cc956913e3690d7c91ca157162033b0a4ec71e06831"
-  end
 
   depends_on :macos
   depends_on "node"
