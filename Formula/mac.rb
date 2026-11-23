@@ -5,6 +5,11 @@ class Mac < Formula
   sha256 "fbb0b920a05e21552cc70838dca7f673610a8eb29f500ea32e06896bb3dd234d"
   license "Apache-2.0"
 
+  bottle do
+    root_url "https://github.com/akleizor/homebrew-tap/releases/download/mac-0.4.2"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe: "1d1552cc4a60973f041ade1fa9beb13c3da1fa0aba17ce9d335875ce05ae83b0"
+  end
+
   depends_on :macos
   depends_on "node"
 
