@@ -5,7 +5,6 @@ class Ccmorph < Formula
   sha256 "6e47674dbcb0fa7804de549388e799e3a79b3ca1ec97473040bb9bfbdcf20f71"
   license "MIT"
 
-
   depends_on "go" => :build
   uses_from_macos "zsh"
 
